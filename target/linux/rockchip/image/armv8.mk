@@ -5,15 +5,15 @@
 # See /LICENSE for more information.
 #
 
-define Device/friendlyarm_nanopi-r2s
-  DEVICE_VENDOR := FriendlyARM
-  DEVICE_MODEL := NanoPi R2S
+define Device/xunlong_orangepi-r1plus
+  DEVICE_VENDOR := Xunlong
+  DEVICE_MODEL := OrangePi R1Plus
   SOC := rk3328
-  UBOOT_DEVICE_NAME := nanopi-r2s-rk3328
-  IMAGE/sysupgrade.img.gz := boot-common | boot-script nanopi-r2s | pine64-img | gzip | append-metadata
+  UBOOT_DEVICE_NAME := orangepi-r1plus-rk3328
+  IMAGE/sysupgrade.img.gz := boot-common | boot-script orangepi-r1plus | pine64-img | gzip | append-metadata
   DEVICE_PACKAGES := kmod-usb-net-rtl8152
 endef
-TARGET_DEVICES += friendlyarm_nanopi-r2s
+TARGET_DEVICES += xunlong_orangepi-r1plus
 
 define Device/pine64_rockpro64
   DEVICE_VENDOR := Pine64
